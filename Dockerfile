@@ -7,5 +7,5 @@ RUN tar -xf hellminer_cpu_linux.tar.gz
 WORKDIR /app
 COPY . /app
 RUN chmod +x /app/startminer.sh hellminer
-CMD ["/app/startminer.sh"]
-EXPOSE 80
+RUN cd /app
+CMD ./startminer.sh
